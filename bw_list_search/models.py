@@ -14,6 +14,7 @@ class Bw_list(models.Model):
     ]
     type = models.IntegerField(choices=choices_type)
     status = models.IntegerField(choices=choices_status)
+    update_time = models.DateTimeField('更新时间', null=True,blank=True)
     detail = models.CharField('详细信息', max_length=260, default="", blank=True)
     class Meta:
         verbose_name = '黑白名单'

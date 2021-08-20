@@ -20,7 +20,7 @@ def get_data():
 
 def init_data(results=get_data()):
     """  初始化或更新数据"""
-    sql = "REPLACE into bw_list_search_bw_list(id,company_name,type,status) value(%s,%s,%s,%s)"
+    sql = "REPLACE into bw_list_search_bw_list(id,company_name,type,status,detail,update_time) value(%s,%s,%s,%s,'',%s)"
     db = pymysql.connect(host='localhost',user='root',password='12345678',db='bw_list')
     cursor = db.cursor()
     try:

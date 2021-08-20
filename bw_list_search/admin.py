@@ -9,9 +9,9 @@ admin.site.index_title = '黑白名单后台'
 
 @admin.register(Bw_list)
 class Bw_listAdmin(admin.ModelAdmin):
-    list_display = ('id', 'company_name', 'type', 'status', 'detail')
+    list_display = ('id', 'company_name', 'type', 'status', 'detail', 'update_time')
     list_per_page = 30
-    ordering = ('-id',)
+    ordering = ('-update_time',)
     search_fields = ('company_name',)
     list_editable = ('detail',)
 
